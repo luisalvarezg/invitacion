@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Jhoseline & Luis</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Customizations for Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#c0a070', // Dorado extraído de la invitación
+                        'brand-dark-blue': '#2c3e50', // Azul marino extraído de las flores
+                        'brand-blue-accent': '#34495e', // Acento de azul para botones
+                        'brand-dark': '#3a3a3a',
+                        'brand-light': '#f7f7f7',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for animations and theme -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            overflow-x: hidden;
+            color: #5a5a5a;
+        }
+        .font-handwriting {
+            font-family: 'Great Vibes', cursive;
+        }
+        /* Fade-in animation on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Simple subtle background */
+        body {
+            background-color: #fcfcfc;
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+
+        <!-- Header Section -->
+        <header class="text-center py-12 fade-in-section">
+            <h2 class="text-2xl md:text-3xl text-brand-dark tracking-widest">¡NOS CASAMOS!</h2>
+            <h1 class="font-handwriting text-7xl md:text-9xl text-brand-gold my-4">Jhoseline & Luis</h1>
+            <p class="text-lg md:text-xl text-gray-600">Tenemos el honor de invitarte a nuestra boda</p>
+            <div class="w-24 h-px bg-brand-gold mx-auto mt-6"></div>
+        </header>
+
+        <!-- Countdown Section -->
+        <section class="text-center my-12 fade-in-section">
+            <h3 class="font-handwriting text-5xl text-brand-dark mb-6">Faltan</h3>
+            <div id="countdown" class="grid grid-cols-4 gap-2 md:gap-4 max-w-md mx-auto">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div id="days" class="text-4xl md:text-5xl font-bold text-brand-dark">00</div>
+                    <div class="text-sm text-gray-600">Días</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div id="hours" class="text-4xl md:text-5xl font-bold text-brand-dark">00</div>
+                    <div class="text-sm text-gray-600">Horas</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div id="minutes" class="text-4xl md:text-5xl font-bold text-brand-dark">00</div>
+                    <div class="text-sm text-gray-600">Minutos</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div id="seconds" class="text-4xl md:text-5xl font-bold text-brand-dark">00</div>
+                    <div class="text-sm text-gray-600">Segundos</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Photo Section -->
+        <section class="my-16 fade-in-section">
+             <img src="https://placehold.co/800x500/c0a070/ffffff?text=Nuestra+Foto" alt="Jhoseline y Luis" class="rounded-lg shadow-xl w-full h-auto object-cover">
+        </section>
+
+        <!-- Ceremony & Reception Details -->
+        <section class="grid md:grid-cols-2 gap-8 my-16 text-center">
+            <div class="fade-in-section bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="font-handwriting text-5xl text-brand-dark mb-4">Ceremonia Religiosa</h3>
+                <div class="w-16 h-px bg-brand-gold mx-auto mb-4"></div>
+                <p class="text-lg font-bold">Sábado, 27 de Septiembre de 2025</p>
+                <p class="text-gray-600">16:00 horas</p>
+                <p class="mt-2 text-gray-600">Parroquia Santuario Inmaculada Concepción del Montículo</p>
+                <p class="text-sm text-gray-500">Plaza del Montículo, La Paz, Bolivia</p>
+                <a href="https://maps.app.goo.gl/bqexJmyowTDkEWAD7" target="_blank" class="inline-block mt-4 bg-brand-dark-blue text-white py-2 px-5 rounded-full hover:bg-brand-blue-accent transition-colors">
+                    Ver en Mapa
+                </a>
+            </div>
+            <div class="fade-in-section bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="font-handwriting text-5xl text-brand-dark mb-4">Ceremonia Civil & Recepción</h3>
+                <div class="w-16 h-px bg-brand-gold mx-auto mb-4"></div>
+                <p class="text-lg font-bold">Sábado, 27 de Septiembre de 2025</p>
+                <p class="text-gray-600">19:00 horas</p>
+                <p class="mt-2 text-gray-600">Círculo Italiano</p>
+                <p class="text-sm text-gray-500">Zona Sopocachi, Av. 6 de Agosto, La Paz, Bolivia</p>
+                 <a href="https://maps.app.goo.gl/gWfYhkQ3Uo1Xt4Yo6" target="_blank" class="inline-block mt-4 bg-brand-dark-blue text-white py-2 px-5 rounded-full hover:bg-brand-blue-accent transition-colors">
+                    Ver en Mapa
+                </a>
+            </div>
+        </section>
+        
+        <!-- Photo Gallery -->
+        <section class="my-16 text-center fade-in-section">
+            <h3 class="font-handwriting text-5xl text-brand-dark mb-8">Nuestros Momentos</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://placehold.co/400x400/c0a070/ffffff?text=Recuerdo" alt="Recuerdo 1" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square">
+                <img src="https://placehold.co/400x400/2c3e50/ffffff?text=Recuerdo" alt="Recuerdo 2" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square">
+                <img src="https://placehold.co/400x400/c0a070/ffffff?text=Recuerdo" alt="Recuerdo 3" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square">
+                <img src="https://placehold.co/400x400/2c3e50/ffffff?text=Recuerdo" alt="Recuerdo 4" class="rounded-lg shadow-md w-full h-auto object-cover aspect-square">
+            </div>
+        </section>
+
+        <!-- RSVP and Gift Registry -->
+        <section class="my-16 text-center grid md:grid-cols-2 gap-8">
+            <div class="fade-in-section">
+                <h3 class="font-handwriting text-5xl text-brand-dark mb-4">Confirmar Asistencia</h3>
+                <p class="text-gray-600 mb-4">Por favor, confirma tu asistencia antes del 31 de Agosto de 2025. ¡Significa mucho para nosotros!</p>
+                <!-- Replace '#' with your Google Forms link -->
+                <a href="#" target="_blank" class="inline-block bg-brand-dark-blue text-white py-3 px-8 rounded-full hover:bg-brand-blue-accent transition-colors text-lg">
+                    Confirmo mi asistencia (RSVP)
+                </a>
+            </div>
+            <div class="fade-in-section">
+                <h3 class="font-handwriting text-5xl text-brand-dark mb-4">Sugerencia de Regalos</h3>
+                <p class="text-gray-600 mb-4">Su presencia es el mejor regalo. Si desean obsequiarnos algo más, pueden hacerlo a través de una transferencia bancaria.</p>
+                <!-- IMPORTANTE: Reemplaza la URL de abajo con la imagen de tu propio código QR -->
+                <img src="https://placehold.co/200x200/ffffff/000000?text=Tu+C%C3%B3digo+QR+aqu%C3%AD" alt="Código QR para transferencia bancaria" class="mx-auto my-4 rounded-lg shadow-md">
+                <p class="text-sm text-gray-500">Opcional: puedes añadir tu número de cuenta aquí.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 fade-in-section">
+             <div class="w-24 h-px bg-brand-gold mx-auto mb-6"></div>
+            <h2 class="font-handwriting text-6xl text-brand-dark">¡Te esperamos!</h2>
+            <p class="text-gray-500 mt-4">&copy; 2025 Jhoseline & Luis</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        // IMPORTANT: Change this to your wedding date. Format: Month Day, Year HH:MM:SS
+        const countDownDate = new Date("Sep 27, 2025 16:00:00").getTime();
+
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-center text-2xl text-brand-dark'>¡Llegó el gran día!</div>";
+            }
+        }, 1000);
+
+        // --- Fade-in animation on scroll ---
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+</body>
+</html>
